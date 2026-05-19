@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
@@ -101,13 +100,10 @@ export default function CareCoVive4Page() {
             {/* Image Gallery */}
             <div className="space-y-4">
               <div className="relative aspect-square overflow-hidden rounded-2xl border bg-gray-100">
-                <Image
+                <img
                   src={product.images[0]}
                   alt={product.name}
-                  fill
-                  className="object-cover"
-                  priority
-                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="h-full w-full object-cover"
                 />
                 <Badge className="absolute left-3 top-3 bg-orange-500 text-white text-sm px-3 py-1">
                   <Star className="mr-1 h-4 w-4" /> Featured
@@ -118,7 +114,7 @@ export default function CareCoVive4Page() {
                 <div className="flex gap-3 overflow-x-auto pb-2">
                   {product.images.map((img, idx) => (
                     <div key={idx} className={`relative h-20 w-20 flex-shrink-0 overflow-hidden rounded-lg border-2 ${idx === 0 ? 'border-orange-500' : 'border-transparent'}`}>
-                      <Image src={img} alt={`${product.name} view ${idx + 1}`} fill className="object-cover" sizes="80px" />
+                      <img src={img} alt={`${product.name} view ${idx + 1}`} className="h-full w-full object-cover" />
                     </div>
                   ))}
                 </div>
