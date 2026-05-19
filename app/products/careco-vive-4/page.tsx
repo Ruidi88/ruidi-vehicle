@@ -25,10 +25,10 @@ const product = {
   description: 'The CareCo Vive 4 is a reliable, budget-friendly mobility scooter designed for everyday use. Its compact design is perfect for short trips like shopping, coffee outings, and getting around without relying on lifts or extensive planning. The scooter disassembles into 5 lightweight parts for easy storage and transportation — it even fits in most car boots. Two colour shrouds (Green & Blue) are included so you can customise the look.',
   images: [
     'https://www.careco.co.uk/media/catalog/product/m/s/ms01010038_base.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=1024&width=750&canvas=750:1024',
-    'https://www.careco.co.uk/media/catalog/product/v/i/vive_4_1.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=107&width=78&canvas=78:107',
-    'https://www.careco.co.uk/media/catalog/product/m/s/ms01010038_1.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=107&width=78&canvas=78:107',
-    'https://www.careco.co.uk/media/catalog/product/v/i/vive_4_5.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=107&width=78&canvas=78:107',
-    'https://www.careco.co.uk/media/catalog/product/m/s/ms01010038_4.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=107&width=78&canvas=78:107',
+    'https://www.careco.co.uk/media/catalog/product/v/i/vive_4_1.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=1024&width=750&canvas=750:1024',
+    'https://www.careco.co.uk/media/catalog/product/m/s/ms01010038_1.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=1024&width=750&canvas=750:1024',
+    'https://www.careco.co.uk/media/catalog/product/v/i/vive_4_5.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=1024&width=750&canvas=750:1024',
+    'https://www.careco.co.uk/media/catalog/product/m/s/ms01010038_4.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=1024&width=750&canvas=750:1024',
   ],
   specs: [
     { label: 'Max Speed', value: '6.4 km/h (4 mph)' },
