@@ -4,16 +4,26 @@ export interface Product {
   name: string
   category: string
   image: string
+  images?: string[]           // Additional product images (gallery)
+  description?: string        // Full product description
+  modelNumber?: string        // Product SKU / model code
+  price?: string              // Display price (e.g., "£599.99")
   specs: {
     maxSpeed: string
     range: string
     weight: string
     capacity: string
   }
+  detailedSpecs?: {           // Extended technical specifications
+    label: string
+    value: string
+  }[]
   features: string[]
   certifications: string[]
   moq: number
   featured?: boolean
+  colors?: string[]           // Available colors
+  whatsIncluded?: string[]   // Box contents
 }
 
 export interface ProductCategory {
@@ -30,7 +40,7 @@ export const productCategories: ProductCategory[] = [
     name: 'Travel Scooters',
     description: 'Lightweight, foldable designs perfect for travel and easy transport. Airline-approved options available.',
     image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop',
-    productCount: 12
+    productCount: 13
   },
   {
     id: '4-wheel-scooters',
@@ -116,6 +126,70 @@ export const products: Product[] = [
     features: ['Carbon fiber frame', 'Remote folding', 'Smart app control', 'GPS tracking'],
     certifications: ['CE', 'FDA'],
     moq: 30
+  },
+  // CareCo Vive 4 - Travel Scooter (from CareCo UK)
+  {
+    id: 'careco-vive-4',
+    name: 'CareCo Vive 4 Mobility Scooter',
+    category: 'travel-scooters',
+    modelNumber: 'MS01010038',
+    image: 'https://www.careco.co.uk/media/catalog/product/m/s/ms01010038_base.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=1024&width=750&canvas=750:1024',
+    images: [
+      'https://www.careco.co.uk/media/catalog/product/m/s/ms01010038_base.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=1024&width=750&canvas=750:1024',
+      'https://www.careco.co.uk/media/catalog/product/v/i/vive_4_1.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=107&width=78&canvas=78:107',
+      'https://www.careco.co.uk/media/catalog/product/m/s/ms01010038_1.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=107&width=78&canvas=78:107',
+      'https://www.careco.co.uk/media/catalog/product/v/i/vive_4_5.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=107&width=78&canvas=78:107',
+      'https://www.careco.co.uk/media/catalog/product/m/s/ms01010038_4.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=107&width=78&canvas=78:107'
+    ],
+    description: 'The CareCo Vive 4 is a reliable, budget-friendly mobility scooter designed for everyday use. Its compact design is perfect for short trips like shopping, coffee outings, and getting around without relying on lifts or extensive planning. The scooter disassembles into 5 lightweight parts for easy storage and transportation — it even fits in most car boots. Two colour shrouds (Green & Blue) are included so you can customise the look.',
+    price: '£599.99',
+    specs: {
+      maxSpeed: '6.4 km/h (4 mph)',
+      range: '16 km (10 miles)',
+      weight: '43.8 kg (heaviest part)',
+      capacity: '136 kg (21 stone)'
+    },
+    detailedSpecs: [
+      { label: 'Max Speed', value: '6.4 km/h (4 mph)' },
+      { label: 'Range', value: 'Up to 16 km (10 miles)' },
+      { label: 'Motor Power', value: '270W' },
+      { label: 'Battery Type', value: '12Ah Dry Sealed Lead-Acid' },
+      { label: 'Battery Watt Hours', value: '288 Wh' },
+      { label: 'Charging', value: 'Off-board (battery charges separately)' },
+      { label: 'Total Weight', value: '43.8 kg' },
+      { label: 'Heaviest Part', value: '~15 kg (front frame)' },
+      { label: 'Max User Weight', value: '136 kg (21 stone)' },
+      { label: 'Turning Radius', value: '115 cm' },
+      { label: 'Ground Clearance', value: '3 cm' },
+      { label: 'Incline Rating', value: '6 degrees' },
+      { label: 'Seat Width × Depth', value: '43.5 cm × 39 cm' },
+      { label: 'Seat Height (adjustable)', value: '52–56 cm' },
+      { label: 'Swivel Seat', value: 'Yes' },
+      { label: 'Front/Rear Wheel Size', value: '20.3 cm (8") each' },
+      { label: 'Tyre Type', value: 'Solid (puncture-proof)' },
+      { label: 'Overall Dimensions (L×W×H)', value: '103 × 49 × 88 cm' },
+      { label: 'Folded Height', value: '33 cm' },
+      { label: 'Suspension', value: 'No' },
+      { label: 'Lights', value: 'No' },
+      { label: 'Disassembly Parts', value: '5 parts (tool-free)' },
+      { label: 'Assembly Time', value: '~15 minutes, 1 person' }
+    ],
+    features: [
+      'Tool-free disassembly into 5 parts',
+      'Fits in car boot for easy transport',
+      'Comfortable swivel seat with flip-up armrests',
+      'Adjustable tiller bar for customised driving position',
+      'Off-board charging — charge battery separately',
+      'Two colour shrouds included: Green & Blue',
+      'Solid tyres — no risk of punctures',
+      'Up to 10 mile (16 km) battery range',
+      'Budget-friendly, ideal for first-time users'
+    ],
+    certifications: ['CE', 'MDR'],
+    moq: 1,
+    featured: true,
+    colors: ['Green', 'Blue'],
+    whatsIncluded: ['User Manual', 'Battery Charger', 'Keys (with spare)'],
   },
   // 4-Wheel Scooters
   {
