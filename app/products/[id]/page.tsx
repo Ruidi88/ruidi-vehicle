@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation'
 import Image from 'next/image'
 import Link from 'next/link'
-import { getProductById, getProductsByCategory, type Product } from '@/lib/products'
+import { products, getProductById, getProductsByCategory, type Product } from '@/lib/products'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
@@ -23,7 +23,6 @@ import {
 
 // Generate static params for all known product IDs
 export function generateStaticParams() {
-  const { products } = require('@/lib/products')
   return products.map((p: Product) => ({ id: p.id }))
 }
 
